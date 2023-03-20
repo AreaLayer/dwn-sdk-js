@@ -3,7 +3,7 @@
 # Decentralized Web Node (DWN) SDK
 
 Code Coverage
-![Statements](https://img.shields.io/badge/statements-95.07%25-brightgreen.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-92.99%25-brightgreen.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-93.53%25-brightgreen.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-95.07%25-brightgreen.svg?style=flat)
+![Statements](https://img.shields.io/badge/statements-95.58%25-brightgreen.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-92.98%25-brightgreen.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-94.11%25-brightgreen.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-95.58%25-brightgreen.svg?style=flat)
 
 ## Introduction
 

@@ -10,7 +10,6 @@ import { validateJsonSchema } from '../schema-validator.js';
 
 export enum DwnInterfaceName {
   Hooks = 'Hooks',
-  Permissions = 'Permissions',
   Protocols = 'Protocols',
   Records = 'Records'
 }

@@ -30,7 +30,7 @@ describe('MessageStoreLevel Tests', () => {
     it('stores messages as cbor/sha256 encoded blocks with CID as key', async () => {
       const alice = await DidKeyResolver.generate();
 
-      const { message } = await TestDataGenerator.generatePermissionsRequest();
+      const { message } = await TestDataGenerator.generateProtocolsConfigure();
 
       await messageStore.put(alice.did, message, {});
 

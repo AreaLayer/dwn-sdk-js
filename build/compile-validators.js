@@ -22,9 +22,6 @@ import GeneralJwk from '../json-schemas/jwk/general-jwk.json' assert { type: 'js
 import GeneralJws from '../json-schemas/general-jws.json' assert { type: 'json' };
 import HooksWrite from '../json-schemas/hooks/hooks-write.json' assert { type: 'json' };
 import JwkVerificationMethod from '../json-schemas/jwk-verification-method.json' assert {type: 'json'};
-import PermissionsDefinitions from '../json-schemas/permissions/definitions.json' assert { type: 'json' };
-import PermissionsGrant from '../json-schemas/permissions/permissions-grant.json' assert { type: 'json' };
-import PermissionsRequest from '../json-schemas/permissions/permissions-request.json' assert { type: 'json' };
 import ProtocolDefinition from '../json-schemas/protocol-definition.json' assert { type: 'json' };
 import ProtocolRuleSet from '../json-schemas/protocol-rule-set.json' assert { type: 'json' };
 import ProtocolsConfigure from '../json-schemas/protocols/protocols-configure.json' assert { type: 'json' };
@@ -44,9 +41,6 @@ const schemas = {
   GeneralJws,
   HooksWrite,
   JwkVerificationMethod,
-  PermissionsDefinitions,
-  PermissionsGrant,
-  PermissionsRequest,
   ProtocolDefinition,
   ProtocolRuleSet,
   ProtocolsConfigure,

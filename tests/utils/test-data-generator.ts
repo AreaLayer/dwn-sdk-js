@@ -1,12 +1,9 @@
 import * as cbor from '@ipld/dag-cbor';
-import { BaseMessage } from '../../src/core/types.js';
 import { CID } from 'multiformats/cid';
 import { CreateFromOptions } from '../../src/interfaces/records/messages/records-write.js';
 import { DataStream } from '../../src/utils/data-stream.js';
 import { DidResolutionResult } from '../../src/did/did-resolver.js';
-import { ed25519 } from '../../src/jose/algorithms/signing/ed25519.js';
 import { getCurrentTimeInHighPrecision } from '../../src/utils/time.js';
-import { PermissionsRequest } from '../../src/interfaces/permissions/messages/permissions-request.js';
 import { Readable } from 'readable-stream';
 import { RecordsQueryFilter } from '../../src/interfaces/records/types.js';
 import { removeUndefinedProperties } from '../../src/utils/object.js';
@@ -396,23 +393,6 @@ export class TestDataGenerator {
       message: hooksWrite.message
     };
   };
-
-  /**
-   * Generates a PermissionsRequest message for testing.
-   */
-  public static async generatePermissionsRequest(): Promise<{ message: BaseMessage }> {
-    const { privateJwk } = await ed25519.generateKeyPair();
-    const permissionRequest = await PermissionsRequest.create({
-      dateCreated                 : getCurrentTimeInHighPrecision(),
-      description                 : 'drugs',
-      grantedBy                   : 'did:jank:bob',
-      grantedTo                   : 'did:jank:alice',
-      scope                       : { method: 'RecordsWrite' },
-      authorizationSignatureInput : { privateJwk: privateJwk, protectedHeader: { alg: privateJwk.alg as string, kid: 'whatev' } }
-    });
-
-    return { message: permissionRequest.message };
-  }
 
   /**
    * Generates a random alpha-numeric string.

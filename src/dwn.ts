@@ -10,7 +10,6 @@ import { DataStoreLevel } from './store/data-store-level.js';
 import { DidResolver } from './did/did-resolver.js';
 import { MessageReply } from './core/message-reply.js';
 import { MessageStoreLevel } from './store/message-store-level.js';
-import { PermissionsRequestHandler } from './interfaces/permissions/handlers/permissions-request.js';
 import { ProtocolsConfigureHandler } from './interfaces/protocols/handlers/protocols-configure.js';
 import { ProtocolsQueryHandler } from './interfaces/protocols/handlers/protocols-query.js';
 import { RecordsDeleteHandler } from './interfaces/records/handlers/records-delete.js';
@@ -33,7 +32,6 @@ export class Dwn {
     this.tenantGate = config.tenantGate;
 
     this.methodHandlers = {
-      [DwnInterfaceName.Permissions + DwnMethodName.Request] : new PermissionsRequestHandler(this.didResolver, this.messageStore, this.dataStore),
       [DwnInterfaceName.Protocols + DwnMethodName.Configure] : new ProtocolsConfigureHandler(this.didResolver, this.messageStore, this.dataStore),
       [DwnInterfaceName.Protocols + DwnMethodName.Query]     : new ProtocolsQueryHandler(this.didResolver, this.messageStore, this.dataStore),
       [DwnInterfaceName.Records + DwnMethodName.Delete]      : new RecordsDeleteHandler(this.didResolver, this.messageStore, this.dataStore),
